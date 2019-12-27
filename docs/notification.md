@@ -1,3 +1,11 @@
+# Notification
+If you need notification you can use `react-toastify` package.
+
+## [Docs](https://www.npmjs.com/package/react-toastify)
+
+## Ussage
+### Create ctyled wrapper
+```js
 import styled from 'styled-components';
 import { ToastContainer } from 'react-toastify';
 
@@ -67,3 +75,30 @@ export default styled(ToastContainer)`
     }
   }
 `;
+
+```
+
+### Add to the `App` component
+```js
+<StyledToastify
+  autoClose={3000}
+  draggable
+  newestOnTop
+  closeButton={false}
+/>
+```
+
+### Call where you need
+```js
+  import { toast } from 'react-toastify';
+
+  toast('Message text');
+
+  toast.info('Info message text');
+
+  toast.success('Success message text');
+
+  toast.warn('Warn message text');
+
+  toast.error('Error message text');
+```

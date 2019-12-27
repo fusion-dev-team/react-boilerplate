@@ -1,3 +1,11 @@
+## Storage
+If you need to work with the local storage you can install `storage-tool` package.
+
+## [Docs](https://www.npmjs.com/package/storage-tool)
+
+## Example of ussage
+### Create your class
+```js
 import InitialStorage from 'storage-tool';
 
 export default class Storage extends InitialStorage {
@@ -21,3 +29,12 @@ export default class Storage extends InitialStorage {
     this.setItem(this.REFRESH_TOKEN_NAME, value);
   }
 }
+
+```
+### Use where you need
+```js
+import Storage from './Storage';
+
+const token = Storage.token; // To get value
+Storage.token = 'some value'; // To set value
+```

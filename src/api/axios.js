@@ -1,13 +1,12 @@
 import axios from 'axios';
 
-import { Storage } from 'utils';
 import config from 'config';
 import store from 'store';
 import { updateSpinnerStatus } from 'store/global/actions';
 
 const getDefaultHeaders = () => ({
   // eslint-disable-next-line object-curly-newline
-  Authorization: `Bearer ${Storage.token}`
+  Authorization: `Bearer ${'Put your token here'}`
 });
 
 export default async ({

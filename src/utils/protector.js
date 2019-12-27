@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
-import _get from 'lodash/get';
 import { connect } from 'react-redux';
 
 import { UserType } from 'utils/types';
@@ -12,7 +11,7 @@ const connectFunction = connect(
 );
 
 const roleCheck = (user, role) => {
-  const userRole = _get(user, 'role', 'none');
+  const userRole = user?.role || 'none';
   const roleRegExp = new RegExp(`^${role.join('$|^')}$`);
 
   return roleRegExp.test(userRole) || (role === 'any' && userRole !== 'none');
@@ -40,7 +39,7 @@ const roleProtector = (Page, options) => connectFunction(memo(
     // eslint-disable-next-line
     const { user } = props;
 
-    const userRole = _get(user, 'role', 'none');
+    const userRole = user?.role || 'none';
     const isRoleAccepted = roleCheck(user, role);
 
     if (!isRoleAccepted) {

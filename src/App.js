@@ -1,9 +1,6 @@
 import React, { PureComponent } from 'react';
 
-import {
-  StyledToastify,
-  Spinner
-} from 'ui';
+import { Spinner } from 'ui';
 import Router from 'routes';
 
 class App extends PureComponent {
@@ -20,13 +17,6 @@ class App extends PureComponent {
     return (
       <>
         <Spinner />
-
-        <StyledToastify
-          autoClose={3000}
-          draggable
-          newestOnTop
-          closeButton={false}
-        />
 
         <Router />
       </>
