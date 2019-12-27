@@ -10,7 +10,6 @@ import auth from './auth';
 const Page404 = React.lazy(() => import('pages/Page404'));
 const Home = React.lazy(() => import('pages/Home'));
 
-
 const Router = () => (
   <Switch>
     {routes.map((route) => (

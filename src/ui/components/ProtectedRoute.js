@@ -41,7 +41,8 @@ ProtectedRoute.propTypes = {
   // route props
   path: PropTypes.string,
   exact: PropTypes.bool,
-  component: PropTypes.node,
+  // eslint-disable-next-line react/forbid-prop-types
+  component: PropTypes.any,
   children: PropTypes.node,
 
   // protector props
